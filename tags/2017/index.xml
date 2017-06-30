@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2017 on 3dprint!!</title>
+    <link>https://3dprint.tolleiv.de/tags/2017/</link>
+    <description>Recent content in 2017 on 3dprint!!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy;2017 Tolleiv</copyright>
+    <lastBuildDate>Sat, 01 Jul 2017 00:22:19 +0200</lastBuildDate>
+    
+	<atom:link href="https://3dprint.tolleiv.de/tags/2017/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Weekly picks</title>
+      <link>https://3dprint.tolleiv.de/posts/2017-07-01-picks/</link>
+      <pubDate>Sat, 01 Jul 2017 00:22:19 +0200</pubDate>
+      
+      <guid>https://3dprint.tolleiv.de/posts/2017-07-01-picks/</guid>
+      <description>These are my picks of the 3d printing world for this week:
+ all3dp.com on the best 33 online services for 3d printing (YouTube)3D Printing Nerd reviews the Kodama Obsidian (YouTube) Thomas Sanladerer on Filaween 2.0! Marty the robot is nearing it&amp;rsquo;s shipping date (YouTube)Maker&amp;rsquo;s Muse on recreating in game objects Hollow Draudi freatured on Thingiverse all3dp.com on the best sources for STL filess Baby Groot on cults3d.com  </description>
+    </item>
+    
+  </channel>
+</rss>

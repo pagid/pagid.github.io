@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://3dprint.tolleiv.de/posts/2017-07-01-picks/</loc>
+    <lastmod>2017-07-01T00:22:19+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://3dprint.tolleiv.de/tags/2017/</loc>
+    <lastmod>2017-07-01T00:22:19+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://3dprint.tolleiv.de/</loc>
+    <lastmod>2017-07-01T00:22:19+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://3dprint.tolleiv.de/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://3dprint.tolleiv.de/tags/picks/</loc>
+    <lastmod>2017-07-01T00:22:19+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://3dprint.tolleiv.de/posts/</loc>
+    <lastmod>2017-07-01T00:22:19+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://3dprint.tolleiv.de/tags/</loc>
+    <lastmod>2017-07-01T00:22:19+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://3dprint.tolleiv.de/tags/things/</loc>
+    <lastmod>2017-07-01T00:22:19+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

@@ -1,0 +1,15 @@
+.content .middot {
+	    font-size: 6px;
+    margin: 0 6px;
+    display: inline;
+    vertical-align: middle;
+}
+.content .middot:before {
+    content: "•";
+}
+.content .front-matter { display: flex; }
+.content .front-matter .date,
+.content .front-matter .reading-time { display: inline; font-size: 14px; }
+
+.content .footline .tags ul { list-style: none; font-size: 13px; }
+.content .footline .tags ul li { display: inline; }
