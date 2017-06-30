@@ -1,0 +1,47 @@
+{{ define "main" }}
+<div class="col-xs-12 col-sm-8 col-md-9 content-column white-background content">
+  {{ partial "mobile_nav_toggle.html" . }}
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="content-column-content">
+         <h1>{{ .Title }}</h1>
+
+        <div class="front-matter">
+          <div class="meta">
+              <div class="date" title="{{ .Date.Format .Site.Params.dateformfull }}">{{ .Date.Format .Site.Params.dateform }}</div>
+              {{ if not .Params.noauthor }}
+                  {{ if .Params.author }}
+                  <div class="author" title="{{ .Params.Author }}"><div class="middot"></div>{{ .Params.author }}</div>
+                  {{end}}
+              {{end}}
+              <div class="reading-time"><div class="middot"></div>{{ .ReadingTime }} minute read</div>
+          </div>
+        </div>
+         {{ .Content }}
+         {{ template "_internal/disqus.html" . }}
+    </div>
+             <div class="footline">
+          <div class="tags">
+                  <ul>
+                    {{ range .Params.tags }}
+                      <div class="middot"></div>
+                      <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> </li>
+                    {{ end }}
+                  </ul>
+              </div>
+              <div class="tags">
+                  <ul>
+                    {{ if isset .Params "hacker_news_id" }}
+                      <div class="middot"></div>
+                      <li><a href="https://news.ycombinator.com/item?id={{ .Params.hacker_news_id }}">Hacker News</a> </li>
+                    {{ end }}
+                    {{ if isset .Params "lobsters_id" }}
+                      <div class="middot"></div>
+                      <li><a href="https://lobste.rs/s/{{ .Params.lobsters_id }}">Lobsters</a> </li>
+                    {{ end }}
+                  </ul>
+              </div>
+      </div>
+  </div>
+</div>
+{{ end }}
