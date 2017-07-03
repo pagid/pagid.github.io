@@ -1,0 +1,11 @@
+language: go
+install: go get -v github.com/spf13/hugo
+script:
+  - hugo
+  - python --version
+  - sudo pip install awscli
+  - aws s3 sync --acl "public-read" --sse "AES256" public/ s3://$BUCKET_NAME --exclude 'post'
+  - aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths /index.html / /page/*
+notifications:
+    email:
+        on_failure: always

@@ -1,5 +1,5 @@
-baseurl = "https://3dprint.tolleiv.de/"
-title = "3dprint!!"
+baseurl = "https://3dmaker.tips/"
+title = "3dmaker.tips"
 theme = "hugo-creative-portfolio-theme"
 languageCode = "en-us"
 # Enable comments by entering your Disqus shortname
@@ -32,7 +32,7 @@ googleAnalytics = ""
      # - send a dummy email yourself to confirm your account
      # - click the confirm link in the email from www.formspree.io
      # - you're done. Happy mailing!
-  email = "pagid+nospam@tolleiv.de"
+  email = "nospam@3dmaker.tips"
 
   # Nav links in the side bar
   [[params.navlinks]]
@@ -48,8 +48,8 @@ googleAnalytics = ""
   #url = "contact/"
 
   [params.social]
-  facebook      = "full page or profile url in facebook"
-  googleplus    = "full profile url in googleplus"
-  email         = "pagid+nospam@tolleiv.de"
-  twitter       = "full profile url in twitter"
-  instagram     = "full profile url in instagram"
+  #facebook      = "full page or profile url in facebook"
+  #googleplus    = "full profile url in googleplus"
+  email         = "nospam@3dmaker.tips"
+  twitter       = "3dmakerDOTtips"
+  #instagram     = "full profile url in instagram"
