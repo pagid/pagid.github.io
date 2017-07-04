@@ -5,7 +5,7 @@ languageCode = "en-us"
 # Enable comments by entering your Disqus shortname
 disqusShortname = ""
 # Enable Google Analytics by entering your tracking code
-googleAnalytics = ""
+googleAnalytics = "UA-102012261-1"
 
 [params]
   dateform = "Jan 2, 2006"
@@ -51,5 +51,5 @@ googleAnalytics = ""
   #facebook      = "full page or profile url in facebook"
   #googleplus    = "full profile url in googleplus"
   email         = "nospam@3dmaker.tips"
-  twitter       = "3dmakerDOTtips"
+  twitter       = "https://twitter.com/3dmakerDOTtips"
   #instagram     = "full profile url in instagram"
