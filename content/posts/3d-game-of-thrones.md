@@ -1,5 +1,6 @@
 +++
 title = "Game Of Thrones printables"
+description = "Here's 10 things every Game of Thrones fan should 3d print."
 date = 2017-07-17T21:16:56+02:00
 draft = false
 image = "https://img.buzzfeed.com/buzzfeed-static/static/2017-07/17/2/asset/buzzfeed-prod-fastlane-02/anigif_sub-buzz-8863-1500272344-14.gif?downsize=715:*&output-format=auto&output-quality=auto"

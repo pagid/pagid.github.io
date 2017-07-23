@@ -5,6 +5,63 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="all,follow">
 <meta name="googlebot" content="index,follow,snippet,archive">
+
+<meta property="go:locale" content="en_US"/>
+<meta property="go:url" content="{{ .Permalink }}"/>
+<meta property="go:site_name" content="3dmaker.tips" />
+
+<meta property="og:title" content="{{ .Title }}">
+{{ if .IsPage }}
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02" }}">
+{{ else }}
+<meta property="og:type" content="website">
+{{ end }}
+<meta property="og:description" content="{{ .Description }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+{{ if .Params.thumbnail }}
+<meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.thumbnail }}">
+{{ end }}
+{{ range .Params.tags }}
+<meta property="og:tags" content="{{ . }}">
+{{ end }}
+<!-- End of Open Graph -->
+<!-- Start of Twitter -->
+{{ if .Site.Params.social.twitter_card_whitelisted }}
+    {{ if .Params.twitter_summary }}
+<meta property="twitter:card" content="{{ .Params.twitter_summary }}">
+    {{ else if .Description }}
+<meta property="twitter:card" content="{{ .Description }}">
+    {{ else }}
+<meta property="twitter:card" content="{{ .Title }}">
+    {{ end }}
+{{ end }}
+<meta property="twitter:description" content="{{ .Description }}">
+<meta property="twitter:title" content="{{ .Title }}">
+{{ if .Params.thumbnail }}
+<meta property="twitter:image" content="{{ .Site.BaseURL }}{{ .Params.thumbnail }}">
+{{ end }}
+<!-- End of Twitter -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <link rel="stylesheet" href="{{ "css/bootstrap.min.css" | absURL }}">
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
 <link rel="stylesheet" href="{{ "css/font-awesome.min.css" | absURL }}">
@@ -33,3 +90,4 @@
   <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
 {{ end }}
 {{ template "_internal/google_analytics_async.html" . }}
+

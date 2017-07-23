@@ -52,4 +52,5 @@ googleAnalytics = "UA-102012261-1"
   #googleplus    = "full profile url in googleplus"
   email         = "nospam@3dmaker.tips"
   twitter       = "https://twitter.com/3dmakerDOTtips"
+  twitter_card_whitelisted = true
   #instagram     = "full profile url in instagram"
