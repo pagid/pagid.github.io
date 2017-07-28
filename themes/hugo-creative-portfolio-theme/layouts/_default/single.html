@@ -2,7 +2,7 @@
 <div class="col-xs-12 col-sm-8 col-md-9 content-column white-background content">
   {{ partial "mobile_nav_toggle.html" . }}
   <div class="row">
-    <div class="col-lg-8">
+    <div class="col-lg-10">
       <div class="content-column-content">
          <h1>{{ .Title }}</h1>
 
@@ -20,28 +20,69 @@
          {{ .Content }}
          {{ template "_internal/disqus.html" . }}
     </div>
-             <div class="footline">
-          <div class="tags">
-                  <ul>
-                    {{ range .Params.tags }}
-                      <div class="middot"></div>
-                      <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> </li>
-                    {{ end }}
-                  </ul>
-              </div>
-              <div class="tags">
-                  <ul>
-                    {{ if isset .Params "hacker_news_id" }}
-                      <div class="middot"></div>
-                      <li><a href="https://news.ycombinator.com/item?id={{ .Params.hacker_news_id }}">Hacker News</a> </li>
-                    {{ end }}
-                    {{ if isset .Params "lobsters_id" }}
-                      <div class="middot"></div>
-                      <li><a href="https://lobste.rs/s/{{ .Params.lobsters_id }}">Lobsters</a> </li>
-                    {{ end }}
-                  </ul>
-              </div>
-      </div>
-  </div>
 </div>
+<div class="footline col-lg-10">
+  <div class="content-column-content">
+    <hr />
+ <div class="related row">
+       <h4> Related posts</h4>
+       {{ $page_link := .Permalink }}
+       {{ $tags := .Params.tags }}
+       {{ range $page := .Site.Pages }}
+       {{ $has_common_tags := intersect $tags .Params.tags | len | lt 0 }}
+       {{ if and $has_common_tags (ne $page_link $page.Permalink) (lt ($.Scratch.Get "$c") 3)}}
+       {{ $.Scratch.Add "$c" 1 }}
+<div class="col-xs-12 col-sm-6 col-md-4">
+       <div class="box-masonry">
+         {{ if and (isset $page.Params "image") $page.Params.image }}
+             {{ if eq $page.Params.showonlyimage true }}
+               <a href="{{ $page.Permalink }}" title="" class="box-masonry-image with-hover-overlay">
+             {{ else }}
+               <a href="{{ $page.Permalink }}" title="" class="box-masonry-image with-hover-overlay with-hover-icon">
+             {{ end }}
+               <img src="{{ $page.Params.image }}" alt="" class="img-responsive">
+             </a>
+         {{ end }}
+         {{ if eq $page.Params.showonlyimage true }}
+             <div class="box-masonry-hover-text-header">
+           {{ else }}
+             <div class="box-masonry-text">
+           {{ end }}
+             <h4><a href="{{ .Permalink }}">{{ $page.Title }}</a></h4>
+             <div class="box-masonry-description">
+               <p>{{ $page.Summary }}</p>
+             </div>
+           </div>
+       </div>
+     </div>
+
+
+       {{ end }}
+       {{ end }}
+ </div>
+ <div class="tags row">
+         <ul>
+           {{ range .Params.tags }}
+             <div class="middot"></div>
+             <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> </li>
+           {{ end }}
+         </ul>
+     </div>
+ <div class="related">
+     <ul>
+       {{ if isset .Params "hacker_news_id" }}
+         <div class="middot"></div>
+         <li><a href="https://news.ycombinator.com/item?id={{ .Params.hacker_news_id }}">Hacker News</a> </li>
+       {{ end }}
+       {{ if isset .Params "lobsters_id" }}
+         <div class="middot"></div>
+         <li><a href="https://lobste.rs/s/{{ .Params.lobsters_id }}">Lobsters</a> </li>
+       {{ end }}
+     </ul>
+ </div>
+</div>
+</div>
+</div>
+
+
 {{ end }}
